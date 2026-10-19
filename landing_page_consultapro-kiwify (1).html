@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de consultas para uso profissional, com acesso conforme permissões, finalidade legítima e legislação aplicável.">
+  <title>Consulta Pro | Inteligência de Dados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7f9fc;--ink:#14233b;--muted:#66758b;--blue:#315efb;--cyan:#37d6c0;--line:#e4eaf3;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{padding:22px 0;background:#ffffffd9;border-bottom:1px solid #e8edf5;backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.5px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--blue),#7893ff);display:grid;place-items:center;color:white;box-shadow:0 8px 18px #315efb33}.logo svg{width:22px}.navlinks{display:flex;align-items:center;gap:28px;color:#65738a;font-size:13px;font-weight:600}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;font-weight:700;font-size:13px;transition:.2s;cursor:pointer;border:0}.btn:hover{transform:translateY(-2px)}.primary{background:var(--blue);color:white;box-shadow:0 10px 24px #315efb2e}.secondary{border:1px solid var(--line);background:white;color:var(--ink)}
+    .hero{padding:78px 0 58px;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#dce6ff 0,rgba(220,230,255,0) 68%);right:-110px;top:-80px;pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#edf2ff;border:1px solid #dfe7ff;border-radius:999px;color:#315efb;font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.dot{width:7px;height:7px;background:#24c7ad;border-radius:50%;box-shadow:0 0 0 4px #24c7ad20}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-2.8px;margin:23px 0 20px;max-width:650px}.hero h1 span{color:var(--blue)}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:540px;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:#7b8799;font-size:11px}.micro span{display:flex;align-items:center;gap:7px}.check{color:#16a58e;font-weight:900}
+    .dashboard{position:relative;background:white;border:1px solid #e7edf6;border-radius:25px;padding:20px;box-shadow:0 30px 80px #243d6817;transform:rotate(1deg)}.dash-top{display:flex;justify-content:space-between;align-items:center;padding:4px 2px 18px;border-bottom:1px solid #edf1f7}.dash-title{font-size:13px;font-weight:800}.live{font-size:10px;color:#168e7d;background:#e9fbf6;padding:7px 9px;border-radius:8px;font-weight:700}.searchbox{margin:18px 0;background:#f7f9fd;border:1px solid #e8edf5;border-radius:12px;padding:13px 14px;display:flex;align-items:center;justify-content:space-between;color:#9aa6b8;font-size:12px}.searchicon{color:var(--blue);font-size:18px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{border:1px solid #edf1f7;border-radius:14px;padding:15px}.metric .label{font-size:10px;color:#8b97a9;font-weight:700}.metric .value{font-family:Manrope,sans-serif;font-size:20px;font-weight:800;margin:8px 0 4px}.metric .sub{font-size:10px;color:#19a48c}.bars{display:flex;align-items:end;gap:7px;height:72px;padding:13px 4px 0}.bars i{display:block;flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,#7390ff,#315efb);opacity:.88}.dash-foot{display:flex;gap:10px;align-items:center;background:#f6f8fc;border-radius:12px;padding:12px;margin-top:13px;font-size:10px;color:#78869a;line-height:1.5}.shield{display:grid;place-items:center;flex:0 0 32px;height:32px;border-radius:10px;background:#e6faf5;color:#159c86;font-size:16px}
+    .trust{padding:17px 0 45px}.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.trust-card{display:flex;align-items:center;gap:13px;padding:17px 19px;background:#fff;border:1px solid var(--line);border-radius:15px}.trust-icon{width:38px;height:38px;display:grid;place-items:center;background:#eef2ff;color:var(--blue);border-radius:12px;font-size:17px}.trust-card strong{display:block;font-size:12px;margin-bottom:4px}.trust-card small{font-size:11px;color:#8793a5}
+    section{padding:66px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 37px}.kicker{color:var(--blue);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px}.section-head h2{font:800 clamp(28px,4vw,42px)/1.15 Manrope,sans-serif;letter-spacing:-1.4px;margin:13px 0}.section-head p{color:var(--muted);font-size:14px;line-height:1.8;margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}.feature:hover{transform:translateY(-4px);box-shadow:0 18px 40px #20385b0b}.feature-icon{height:44px;width:44px;display:grid;place-items:center;border-radius:13px;background:#eef2ff;color:var(--blue);font-size:20px;margin-bottom:20px}.feature h3{font:800 16px Manrope,sans-serif;margin:0 0 9px}.feature p{font-size:12px;line-height:1.75;color:var(--muted);margin:0}
+    .band{background:#14233b;color:white;position:relative;overflow:hidden}.band:after{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,#315efb55,transparent 68%);right:-100px;top:-140px}.band-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}.band h2{font:800 clamp(29px,4vw,43px)/1.13 Manrope,sans-serif;letter-spacing:-1.4px;margin:14px 0}.band p{color:#bdc8da;line-height:1.8;font-size:14px}.steps{display:grid;gap:13px}.step{display:flex;gap:14px;align-items:flex-start;padding:17px;border:1px solid #ffffff20;background:#ffffff08;border-radius:14px}.num{width:31px;height:31px;flex:0 0 31px;border-radius:10px;background:#315efb;color:white;display:grid;place-items:center;font-weight:800;font-size:12px}.step strong{font-size:13px;display:block;margin:2px 0 5px}.step span{font-size:11px;color:#bdc8da;line-height:1.6}
+    .compliance{background:#fff}.compliance-box{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:#f7f9fc;border:1px solid var(--line);padding:30px;border-radius:22px}.compliance-box h3{font:800 23px Manrope,sans-serif;letter-spacing:-.6px;margin:0 0 12px}.compliance-box p{font-size:13px;color:var(--muted);line-height:1.8;margin:0}.compliance-list{display:grid;gap:12px}.compliance-list div{display:flex;gap:10px;font-size:12px;color:#4d5d73;line-height:1.6}.compliance-list b{color:#159c86}
+    .cta{padding:66px 0}.cta-box{text-align:center;padding:50px 25px;background:linear-gradient(135deg,#eaf0ff,#f5fbff);border:1px solid #dfe8ff;border-radius:25px}.cta-box h2{font:800 clamp(28px,4vw,40px)/1.15 Manrope,sans-serif;letter-spacing:-1.3px;margin:0 0 13px}.cta-box p{max-width:560px;margin:0 auto 23px;color:var(--muted);font-size:14px;line-height:1.8}
+    footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fff}.footer-row{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}.footer-note{max-width:650px;font-size:10px;line-height:1.8;color:#8793a5;margin-top:13px}.footer-right{font-size:11px;color:#8793a5;white-space:nowrap}
+
+    .promo{padding:8px 0 28px}.promo-card{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:30px;border-radius:22px;background:linear-gradient(125deg,#14233b,#203d75);color:#fff;box-shadow:0 22px 55px #14233b20}.promo-tag{display:inline-flex;padding:7px 10px;border-radius:999px;background:#ffffff18;color:#cbd7ff;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.promo-card h2{font:800 clamp(26px,3vw,37px)/1.12 Manrope,sans-serif;margin:15px 0 10px}.promo-card p{color:#c5d0e3;font-size:13px;line-height:1.7}.promo-price{background:#fff;color:var(--ink);border-radius:17px;padding:22px;text-align:center}.old-price{font-size:14px;color:#8a96a8;text-decoration:line-through}.new-price{font:800 43px/1.15 Manrope,sans-serif;color:var(--blue);margin:5px 0}.saving{display:inline-block;background:#e6faf5;color:#138b78;font-size:10px;font-weight:800;padding:6px 9px;border-radius:7px}.timer-label{font-size:10px;color:#75839a;margin:15px 0 7px}.timer{display:flex;justify-content:center;gap:8px;margin-bottom:15px}.timer-unit{min-width:55px;padding:9px 7px;background:#f2f5fb;border-radius:9px}.timer-unit strong{display:block;font:800 19px Manrope,sans-serif}.timer-unit small{font-size:9px;color:#7c899b}.promo-actions{display:grid;gap:9px}.promo-actions .btn{width:100%}.feature-highlight{background:#edf2ff;border:1px solid #dce5ff;border-radius:17px;padding:22px;margin-top:20px}.feature-highlight h3{font:800 17px Manrope,sans-serif;margin:0 0 13px}.data-tags{display:flex;flex-wrap:wrap;gap:9px}.data-tags span{padding:10px 12px;background:#fff;border:1px solid #dce5ff;border-radius:10px;font-size:12px;font-weight:700;color:#344660}.data-tags b{color:var(--blue)}
+    @media(max-width:850px){.navlinks{display:none}.hero{padding-top:53px}.hero-grid,.band-grid,.promo-card{grid-template-columns:1fr;gap:25px}.hero h1{letter-spacing:-1.8px}.dashboard{max-width:550px;width:100%;margin:auto}.trust-row{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.compliance-box{grid-template-columns:1fr}.band-grid{gap:25px}}
+    @media(max-width:560px){.promo-card{padding:21px}.new-price{font-size:38px}.timer-unit{min-width:48px}.wrap{width:min(100% - 28px,1160px)}header{padding:14px 0}.brand{font-size:16px}.nav .btn{padding:11px 12px;font-size:11px}.hero{padding:42px 0 36px}.hero h1{font-size:40px}.hero p{font-size:14px}.actions .btn{width:100%}.micro{gap:11px}.features{grid-template-columns:1fr}.metric .value{font-size:18px}section{padding:50px 0}.compliance-box{padding:22px}.footer-row{flex-direction:column}.footer-right{white-space:normal}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3 20 7v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="m8 12 2.5 2.5L16 9"/></svg></span> Consulta<span style="color:#315efb">Pro</span></a>
+    <nav class="navlinks"><a href="#recursos">Recursos</a><a href="#como-funciona">Como funciona</a><a href="#seguranca">Conformidade</a></nav>
+    <a class="btn primary" href="#acesso">Conhecer a plataforma <span>↗</span></a>
+  </div>
+</header>
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Inteligência de dados para profissionais</div>
+        <h1>Informação organizada. <span>Decisões melhores.</span></h1>
+        <p>Centralize consultas em uma experiência simples, ágil e profissional. Acesse informações disponibilizadas pela plataforma de acordo com sua autorização, finalidade legítima e regras aplicáveis.</p>
+        <div class="actions"><a class="btn primary" href="#acesso">Quero conhecer o acesso <span>→</span></a><a class="btn secondary" href="#recursos">Explorar recursos</a></div>
+        <div class="micro"><span><b class="check">✓</b> Interface intuitiva</span><span><b class="check">✓</b> Acesso conforme permissões</span><span><b class="check">✓</b> Foco em uso responsável</span></div>
+      </div>
+      <div class="dashboard" aria-label="Ilustração demonstrativa do painel">
+        <div class="dash-top"><div class="dash-title">Visão geral da plataforma</div><div class="live">● Ambiente demonstrativo</div></div>
+        <div class="searchbox"><span>Pesquise por uma referência autorizada...</span><span class="searchicon">⌕</span></div>
+        <div class="metric-grid">
+          <div class="metric"><div class="label">CONSULTAS</div><div class="value">Centralizadas</div><div class="sub">Fluxo simplificado</div></div>
+          <div class="metric"><div class="label">ORGANIZAÇÃO</div><div class="value">Em um só lugar</div><div class="sub">Mais clareza no processo</div></div>
+          <div class="metric"><div class="label">CONTROLE</div><div class="value">Por perfil</div><div class="sub">Permissões aplicáveis</div></div>
+          <div class="metric"><div class="label">EXPERIÊNCIA</div><div class="value">Objetiva</div><div class="bars"><i style="height:35%"></i><i style="height:60%"></i><i style="height:45%"></i><i style="height:82%"></i><i style="height:68%"></i><i style="height:100%"></i><i style="height:76%"></i></div></div>
+        </div>
+        <div class="dash-foot"><span class="shield">✓</span><span><strong style="color:#33445c">Uso responsável de dados</strong><br>Consultas sujeitas a permissões, finalidade legítima e controles aplicáveis.</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="trust"><div class="wrap trust-row">
+    <div class="trust-card"><span class="trust-icon">⌘</span><div><strong>Fluxo simplificado</strong><small>Menos etapas, mais organização</small></div></div>
+    <div class="trust-card"><span class="trust-icon">◈</span><div><strong>Informação centralizada</strong><small>Uma experiência clara e objetiva</small></div></div>
+    <div class="trust-card"><span class="trust-icon">♧</span><div><strong>Privacidade em foco</strong><small>Responsabilidade em cada consulta</small></div></div>
+  </div></div>
+  <section id="recursos">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Recursos da plataforma</div><h2>O que você precisa, em uma experiência mais simples.</h2><p>Ferramentas para apoiar processos profissionais de verificação e análise, sempre respeitando as permissões de acesso e a finalidade autorizada.</p></div>
+      <div class="features">
+        <article class="feature"><div class="feature-icon">⌕</div><h3>Consultas centralizadas</h3><p>Encontre em um só ambiente os recursos de consulta habilitados para seu perfil e para sua finalidade de uso.</p></article>
+        <article class="feature"><div class="feature-icon">▤</div><h3>Informações cadastrais</h3><p>Organize verificações cadastrais disponíveis e autorizadas, de acordo com a origem e as regras de cada base.</p></article>
+        <article class="feature"><div class="feature-icon">↗</div><h3>Indicadores financeiros</h3><p>Consulte indicadores e informações financeiras somente quando houver autorização e base legal aplicável.</p></article>
+        <article class="feature"><div class="feature-icon">◎</div><h3>Visão organizada</h3><p>Apresente os resultados de forma clara para facilitar a leitura, a conferência e o acompanhamento do processo.</p></article>
+        <article class="feature"><div class="feature-icon">◷</div><h3>Mais agilidade no fluxo</h3><p>Uma interface objetiva ajuda a reduzir etapas desnecessárias e torna a rotina de consulta mais prática.</p></article>
+        <article class="feature"><div class="feature-icon">⌑</div><h3>Acesso conforme perfil</h3><p>Os dados e recursos exibidos dependem das permissões concedidas, da finalidade legítima e dos controles aplicáveis.</p></article>
+      </div>
+      <div class="feature-highlight">
+        <h3>Principais dados consultáveis*</h3>
+        <div class="data-tags"><span><b>✓</b> Parentesco e vínculos</span><span><b>✓</b> Endereços</span><span><b>✓</b> Telefones</span><span><b>✓</b> Empresas e vínculos empresariais</span><span><b>✓</b> Informações cadastrais</span><span><b>✓</b> Indicadores financeiros autorizados</span></div>
+        <p style="font-size:10px;margin-top:12px">*A disponibilidade depende da fonte, das permissões concedidas e da finalidade legal da consulta.</p>
+      </div>
+    </div>
+  </section>
+  <section class="promo" id="oferta"><div class="wrap"><div class="promo-card">
+    <div><span class="promo-tag">Condição promocional</span><h2>Acesso à plataforma por um preço especial.</h2><p>Confira os recursos disponíveis para seu perfil e confirme as condições da oferta no atendimento antes da compra.</p></div>
+    <div class="promo-price"><div class="old-price">De R$ 179,99</div><div class="new-price">R$ 29,99</div><span class="saving">PREÇO PROMOCIONAL</span>
+      <div class="timer-label">Tempo restante desta oferta após sua visita</div><div class="timer" role="timer" aria-live="polite"><div class="timer-unit"><strong id="hours">29</strong><small>HORAS</small></div><div class="timer-unit"><strong id="minutes">00</strong><small>MINUTOS</small></div><div class="timer-unit"><strong id="seconds">00</strong><small>SEGUNDOS</small></div></div>
+      <div class="promo-actions"><a class="btn primary" href="https://pay.kiwify.com.br/6C5KaRs" id="buy-button" target="_blank" rel="noopener">Comprar por R$ 29,99 ↗</a><a class="btn secondary" href="https://wa.me/5511917516386?text=Ol%C3%A1%21%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20plataforma." target="_blank" rel="noopener">Falar com atendimento</a></div>
+      <p style="font-size:10px;color:#8793a5;margin:12px 0 0">Pagamento seguro pelo checkout da Kiwify.</p>
+    </div>
+  </div></div></section>
+  <section class="band" id="como-funciona">
+    <div class="wrap band-grid">
+      <div><div class="kicker" style="color:#91a8ff">Comece em poucos passos</div><h2>Uma jornada simples, do acesso à consulta.</h2><p>Conheça a plataforma, confirme quais recursos estão disponíveis para sua atividade e utilize cada consulta dentro das condições autorizadas.</p><a href="#acesso" class="btn" style="background:#fff;color:#172844;margin-top:10px">Solicitar informações ↗</a></div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><div><strong>Conheça o acesso</strong><span>Confira as condições do produto, os recursos disponíveis e os termos de utilização.</span></div></div>
+        <div class="step"><div class="num">02</div><div><strong>Valide sua finalidade</strong><span>Use as consultas apenas quando houver propósito legítimo, autorização e base legal adequada.</span></div></div>
+        <div class="step"><div class="num">03</div><div><strong>Consulte com responsabilidade</strong><span>Trate os resultados de forma segura e respeite a privacidade e os direitos dos titulares.</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="compliance" id="seguranca">
+    <div class="wrap">
+      <div class="compliance-box">
+        <div><div class="kicker">Privacidade e conformidade</div><h3>Confiança começa com transparência.</h3><p>O uso de dados pessoais deve observar a legislação aplicável, incluindo a LGPD, os termos das fontes consultadas e a finalidade autorizada. A disponibilidade de cada informação depende das permissões e das condições de acesso correspondentes.</p></div>
+        <div class="compliance-list">
+          <div><b>✓</b><span><strong>Finalidade legítima:</strong> consulte apenas o necessário para uma finalidade permitida.</span></div>
+          <div><b>✓</b><span><strong>Permissão e base legal:</strong> o acesso não substitui a necessidade de autorização ou base legal adequada.</span></div>
+          <div><b>✓</b><span><strong>Transparência:</strong> confira os termos, a política de privacidade e as condições do serviço antes de contratar.</span></div>
+          <div><b>✓</b><span><strong>Sem promessas absolutas:</strong> disponibilidade, cobertura e atualização variam conforme a fonte e o tipo de consulta.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta" id="acesso">
+    <div class="wrap"><div class="cta-box"><div class="kicker">Pronto para conhecer?</div><h2>Leve mais organização para suas consultas.</h2><p>Solicite os detalhes do produto, confirme os recursos disponíveis para sua atividade e veja as condições de acesso antes de contratar.</p><a class="btn primary" href="https://wa.me/5511917516386?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20plataforma%20e%20as%20condi%C3%A7%C3%B5es%20de%20acesso." target="_blank" rel="noopener">Falar com a equipe <span>↗</span></a></div></div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><div><a class="brand" href="#inicio"><span class="logo">✓</span> Consulta<span style="color:#315efb">Pro</span></a><div class="footer-note">Esta página é um modelo demonstrativo. Antes da publicação, inclua a razão social, CNPJ, canais de atendimento, termos de uso e política de privacidade reais. Não anuncie certificações, licenças, cobertura de dados ou garantias de segurança sem documentação verificável. O acesso a dados pessoais, financeiros, contatos e vínculos familiares deve ocorrer apenas quando legalmente autorizado.</div></div><div class="footer-right">© 2026 ConsultaPro · Todos os direitos reservados</div></div></footer>
+<script>
+(function(){
+  const key='consultapro_promo_deadline_v1', duration=29*60*60*1000;
+  let deadline=Number(localStorage.getItem(key));
+  if(!deadline || !Number.isFinite(deadline) || deadline<=Date.now()){deadline=Date.now()+duration;localStorage.setItem(key,String(deadline));}
+  const h=document.getElementById('hours'),m=document.getElementById('minutes'),s=document.getElementById('seconds');
+  function tick(){const total=Math.max(0,Math.floor((deadline-Date.now())/1000));h.textContent=String(Math.floor(total/3600)).padStart(2,'0');m.textContent=String(Math.floor((total%3600)/60)).padStart(2,'0');s.textContent=String(total%60).padStart(2,'0');if(total===0)document.querySelector('.timer-label').textContent='O prazo exibido terminou. Consulte a equipe para confirmar a oferta vigente.';}
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
